@@ -12,7 +12,7 @@ class Tomagotchi {
 
 	eat() {
 		if(this.alive) {
-			if(this.fullness < 10) {
+			if(this.fullness < 10) {			
 				console.log("That was delicious! thank you!");
 				this.fullness++;
 			} else if (this.fullness > 9) {
@@ -72,7 +72,7 @@ let blue = new Tomagotchi();
 
 $(document).ready(function(){
 	let t = 1;
-	let year = 8;  // 2 minutes
+	let year = 7;  // 2 minutes
 
 	let nameTomagotchi = window.prompt('Name your Tomagotchi:');
 	$('#nameTomagotchi').text('Name: ' + nameTomagotchi);
@@ -85,13 +85,13 @@ $(document).ready(function(){
 		// how does blue get sad?
 		if (blue.alive) { //hunger
 
-			if(t % 10 == 0) {
+			if(t % 8 == 0) {
 				if(blue.alive) {
 					blue.fullness--;
-					console.log("Blue is hungry!");
+					console.log("I am soooo hungry!");
 					if(blue.fullness == 0) {
 						blue.alive = false;
-						console.log("Blue died of hunger");
+						console.log("I died of hunger");
 						
 					}
 				}
@@ -100,33 +100,33 @@ $(document).ready(function(){
 
 			if(t % year == 0) { //age
 				blue.age++;
-				console.log("Blue aged a year!");
+				console.log("Happy Birthday!");
 				
 				// implement all picture changes here
-				if(blue.age == 2) {
+				if(blue.age == 3) {
 					$("#bluesPicture").attr('src', 'pics/young1.png');
 
-				} else if (blue.age == 3) {
+				} else if (blue.age == 5) {
 					$("#bluesPicture").attr('src', 'pics/teen2.png');
-				} else if (blue.age == 4) {
+				} else if (blue.age == 6) {
 					$("#bluesPicture").attr('src', 'pics/adultcreature2.png');
 				}
 
 			}
 
-			if(t % 13 == 0){ //play activity happy
+			if(t % 10 == 0){ //play activity happy
 				if(blue.alive){
 					if(blue.happy){
 						blue.activity--;
 					console.log("I am dying of boredom!");	
 					if(blue.happy == 0) {
 						blue.alive = false;
-						console.log('Blue is rebooted');
+						console.log('I have been is rebooted');
 					}
 					}
 				}							
 			}	
-			if(t % 16 == 0){ //light tired
+			if(t % 12 == 0){ //light tired
 				if(blue.alive){
 					if(blue.sleepy){
 						blue.tired--;
@@ -139,9 +139,19 @@ $(document).ready(function(){
 				}					
 			}		
 		} else {
+			
+			alert('Sorry for your loss');
 			clearInterval();
-		}		
-		$('#pgAge').css("width", (blue.age /8 * 100) + '%'); 	
+			
+			//alert('Sorry for your loss');
+			
+			//disableAlert();
+				
+		}
+		
+
+
+		$('#pgAge').css("width", (blue.age /25 * 100) + '%'); 	
 		$('#pgFeed').css("width", (blue.fullness * 10)+ "%");
 		$('#pgLight').css("width", (blue.tired * 10)+ "%");
 		$('#pgPlay').css("width", (blue.activity * 10)+ "%");
