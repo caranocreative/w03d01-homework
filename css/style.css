@@ -1,29 +1,64 @@
-.container-fluid {
-	background-color: pink;
+.container {
+	background-color: #08605F;
 	border: 2px solid grey;
 	border-radius: 10px;
-	height: 500px;
+	
 	
 }
 
 .screen {
-	background-color: lightgrey;
+	background-color: #e6e8e6;
 	border: 2px  solid black;
 	border-radius: 10px;
-	height: 300px;
-}
-
-.hunger, .sleepiness, .happiness, .age {
-	height: 50px;
-	border-radius: 10px;
-	padding: 6px;
-	text-align: center;
-	font-size: 28px;
-	font-family: 'Teko', sans-serif;
-	
-
-
-
+	padding: 5px;
+	margin-top: 10px;
 
 }
+
+.insideScreen {
+	background-image: url("https://i.imgur.com/vCP8PtG.jpg");
+	border-radius: 8px;
+
+}
+
+#nameTomagotchi {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+
+.feed {
+	background-color: #A0AE37;
+	padding: 15px;
+	border-radius: 12px;
+	margin: 5px;
+}
+.light {
+	background-color: #06AED5;
+	padding: 15px;
+	border-radius: 12px;
+	margin: 5px;
+}
+.play {
+	background-color: #C33C54;
+	padding: 15px;
+	border-radius: 12px;
+	margin: 5px;
+}
+
+.age {
+	background-color: #FFA630;
+	padding: 15px;
+	border-radius: 12px;
+	margin: 5px;
+}
+.actions {
+	padding: 25px;
+}
+
+
+
+
+
+
 

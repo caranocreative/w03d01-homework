@@ -16,33 +16,47 @@
 	<title>Tomagotchi</title>
 </head>
 <body>
-<div class='container-fluid'>
-	<div class='container-fluid screen'>
-	  	<div class="row score">
-		    <div class="col-sm-2 hunger" style="background-color: blue;">
-		      Hunger
-		      </div>
-		    <div class="col-sm-2 sleepiness" style="background-color: red;">
-		      Sleepiness
-		      </div>
-		    <div class="col-sm-2 happiness" style="background-color: pink;">
-		      Happiness
-		      </div>
-		    <div class="col-sm-2 age" style="background-color: cyan;">
-		      Age
-		      </div>
-		</div>
 
-	</div>
-	<div class='actions'>
-		
-		<button type="button" class="btn btn-primary feed" id="feed">Feed</button>
-		<button type="button" class="btn btn-primary light" id="light">Light</button>
+<div class='container'>
+	<div class='container screen'>
+	
+  	<div class='container insideScreen'>
+  		<div id='nameTomagotchi'>Name:</div>
+       <!--  <img class='img-responsive infantPic'src="pics/infant.png" width='100%'> -->
+      <span style="display:inline-block;">
+        <center>
+         <img src="pics/baby.png"  id="bluesPicture" style="width: 700px; height: 650px;">
+        </center>
+      </span>
+        <!-- <img class='img-responsive teenPic' src="pics/teen.svg" width='100%'>
+        <img class='img-responsive adultcreature' src="pics/adultcreature.svg" width='100%'> -->
+  	<br>
+    
+         <div class="progress feed" id="pgFeed">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">FEED</div>
+      </div>
+      <div class="progress light"
+      id="pgLight">
+        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">LIGHT</div>
+      </div>
+      <div class="progress play" id="pgPlay">
+        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">PLAY</div>
+      </div>
+      <div class="progress age" id='pgAge'>
+        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10">AGE</div>
+    </div>
 
-		<button type="button" class="btn btn-primary play" id="play">Play</button>
-		
-	</div>
+  </div>
 
+
+</div>
+<div class='actions text-center'>
+  
+  <button type="button" class="btn btn-primary feed" id="feed">Feed</button>
+  <button type="button" class="btn btn-primary light" id="light">Light</button>
+
+  <button type="button" class="btn btn-primary play" id="play">Play</button>
+  
 </div>
 	
 
